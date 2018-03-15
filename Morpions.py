@@ -1,3 +1,5 @@
+import os;
+
 t = [None,None,None],[None,None,None],[None,None,None];
 player = False;
 game_win = False;
@@ -12,6 +14,7 @@ for i in (0,1,2):
             t[i][j] = ' ';
 
 while game_win == False:
+    os.system("cls");
     i=0;
     for i in (0,1,2):
         print(t[i][0],t[i][1],t[i][2]);
