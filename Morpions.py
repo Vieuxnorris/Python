@@ -16,8 +16,9 @@ for i in (0,1,2):
 while game_win == False:
     os.system("cls");
     i=0;
+    print("    1   2   3")
     for i in (0,1,2):
-        print("|",t[i][0],"|",t[i][1],"|",t[i][2],"|");
+        print(i+1,"|",t[i][0],"|",t[i][1],"|",t[i][2],"|");
     x = input("entrez une valeur de x : ");
     x = int(x)-1;
     y = input("entrez une valeur de y : ");
