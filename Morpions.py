@@ -21,8 +21,14 @@ while game_win == False:
         print(i+1,"|",t[i][0],"|",t[i][1],"|",t[i][2],"|");
     x = input("entrez une valeur de x : ");
     x = int(x)-1;
+    while (x<0) or (x>2):
+        x = input("erreur, entrez un nombre entre 1 et 3 : ");
+        x = int(x)-1;
     y = input("entrez une valeur de y : ");
     y = int(y)-1;
+    while (y<0) or (y>2):
+        y = input("erreur, entrez un nombre entre 1 et 3 : ");
+        y = int(x)-1;
     if t[x][y] is ' ':
         if player is False:
             t[x][y] = 'x';
