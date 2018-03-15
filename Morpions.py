@@ -2,6 +2,7 @@ import os;
 
 t = [None,None,None],[None,None,None],[None,None,None];
 player = False;
+nombre_de_manche = 0;
 game_win = False;
 compteur = 0;
 i=0;
@@ -62,7 +63,13 @@ while game_win == False:
             game_win = True;
             break;
         i = i+1;
-if player == True:
+    nombre_de_manche = nombre_de_manche+1;
+    if nombre_de_manche == 9:
+        break;
+
+if player == True and nombre_de_manche < 9:
     print("félicitation X");
-else:
+elif player == False and nombre_de_manche < 9:
     print("félicitation Y");
+if nombre_de_manche == 9:
+    print("match nul");
