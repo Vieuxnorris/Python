@@ -38,29 +38,11 @@ while game_win == False:
             t[x][y] = 'y';
             player = False;
     while i<3:
-        if (t[i][0]=='x') and (t[i][1]=='x') and (t[i][2]=='x'):
+        if (t[i][0]=='x') and (t[i][1]=='x') and (t[i][2]=='x') or (t[0][i]=='x') and (t[1][i]=='x') and (t[2][i]=='x') or (t[0][0]=='x' or t[0][2]=='x') and (t[1][1]=='x') and (t[2][2]=='x' or t[2][0]=='x'):
             game_win = True;
             break;
-        elif (t[i][0]=='y') and (t[i][1]=='y') and (t[i][0]=='y'):
+        elif (t[i][0]=='y') and (t[i][1]=='y') and (t[i][0]=='y') or (t[0][i]=='y') and (t[1][i]=='y')  and (t[2][i]=='y') or (t[0][0]=='y' or t[0][2]=='y') and (t[1][1]=='y') and (t[2][2]=='y' or t[2][0]=='y'):
             game_win = True
-            break;
-        i = i+1;
-    i=0;
-    while i<3:
-        if (t[0][i]=='y') and (t[1][i]=='y')  and (t[2][i]=='y'):
-            game_win = True;
-            break;
-        elif (t[0][i]=='x') and (t[1][i]=='x') and (t[2][i]=='x'):
-            game_win = True;
-            break;
-        i = i+1;
-    i=0;
-    while i<3:
-        if(t[0][0]=='y' or t[0][2]=='y') and (t[1][1]=='y') and (t[2][2]=='y' or t[2][0]=='y'):
-            game_win = True;
-            break;
-        elif(t[0][0]=='x' or t[0][2]=='x') and (t[1][1]=='x') and (t[2][2]=='x' or t[2][0]=='x'):
-            game_win = True;
             break;
         i = i+1;
     nombre_de_manche = nombre_de_manche+1;
