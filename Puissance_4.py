@@ -52,7 +52,7 @@ while game_win == False:
             for m in range(0,len(t[l])):
                 if (t[l][m]=='x' and t[l-1][m]=='x' and t[l-2][m]=='x' and t[l-3][m]=='x') or (t[l][m]=='y' and t[l-1][m]=='y' and t[l-2][m]=='y' and t[l-3][m]=='y'):
                     game_win = True;
-                if m < 6 and l < 6:
+                if m < 4 and l < 6:
                     if (t[l][m]=='x' and t[l][m+1]=='x' and t[l][m+2]=='x' and t[l][m+3]=='x') or (t[l][m]=='y' and t[l][m+1]=='y' and t[l][m+2]=='y' and t[l][m+3]=='y'):
                         game_win = True;
                     if (t[l][m]=='x' and t[l-1][m+1]=='x' and t[l-2][m+2]=='x' and t[l-3][m+3]=='x') or (t[l][m]=='y' and t[l-1][m+1]=='y' and t[l-2][m+2]=='y' and t[l-3][m+3]=='y'):
